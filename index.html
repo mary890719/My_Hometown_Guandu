@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My hometown</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  * {
+    font-family:Microsoft JhengHei;">微軟正黑體;
+  } 
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 24px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">My Hometown-Guandu</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#band">About</a></li>
+        <li><a href="#tour">Temples</a></li>
+        <li><a href="#contact">Natural Park</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#School">School</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/g1.jpg" alt="About" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>關渡</h3>
+          <p>為台灣台北市北投區的一個地名，正好是淡水河及基隆河的交會口。自古以來，即是重要的候鳥棲息地；境內也有台北市最大的濕地，其生態非常豐富。
+1996年在此成立關渡自然公園，2001年12月1日起委由台灣台北市野鳥學會經營管理，首創台灣生態保育區委託民間社團經營管理的第一例。
+關渡的廟宇「關渡宮」，是北台灣著名的媽祖廟，香火鼎盛。</p>
+        </div>      
+      </div>
+            
+      <div class="item">
+        <img src="images/t1.jpg" alt="Temples" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>關渡宮</h3>
+          <p>位於臺北市北投區關渡里，俗稱關渡媽祖宮、關渡天后宮。
+          為主祀天上聖母媽祖之臺灣民間信仰廟宇，兼容佛教與道教，為北臺灣歷史最悠久、香火最鼎盛的媽祖廟，早期有「南有北港媽、北有關渡媽」一說，尊崇北港朝天宮與關渡宮天上聖母。
+          關渡宮與北港朝天宮、鹿港天后宮合稱「臺灣三大媽祖廟」。</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="images/p1.jpg" alt="Natural park" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>關渡自然公園</h3>
+          <p>位在淡水河與基隆河匯流處東岸關渡堤防內，為一個具有保育、教育、研究等多功能的自然公園，南臨的基隆河口濕地劃歸為關渡自然保留區。
+          兩者同為臺北市轄區內碩果僅存的濕地環境與候鳥棲地，亦是關渡平原的一部份。</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+  <h3>關渡</h3>
+  <p>「關渡」源自原住民語，故早期漢字音譯時並無統一寫法。
+    包括干答門（裨海記遊）、干豆門（皇輿全覽圖）、干答、干豆、關杜、江頭、肩脰、乾竇及關豆等。
+    在日治時期則多作「江頭（かうたう）」，並用於淡水線之車站名。
+    戰後迄今幾乎統一作「關渡」。例如台北捷運淡水線關渡站。
+    而今日臺語「Kan-tāu」，漢字以「干豆」的音讀較能表音。</p>
+</div>
+
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">關渡宮</h3>
+    <p>　　據《諸羅縣志》所記，關渡宮創於康熙51年（1712）。<br>
+    　　關渡宮是臺南以北歷史僅次於北港朝天宮的媽祖廟，信徒遂有「南有北港媽，北有干豆媽」的諺語流傳。<br>
+    　　天妃廟初創落成，《諸羅縣志》記載其熱鬧情形說：「靈山廟：在淡水干豆門，前臨巨港，合峰仔峙、擺接東西二流與海潮匯，波瀾甚壯。康熙五十一年建廟，以祀天妃，落成之日，諸番並集。忽有巨魚數千隨潮而至，如拜禮然。須臾，乘潮復出於海，人皆稱異。」囿於物資有限與社會環境，僅以茅草做為屋頂、因陋就簡地籌建完成。<br>
+    　　康熙51年是關渡宮建廟之年，是洋盜鄭盡心在淡水外海窺伺之時，關渡宮位居進出臺北盆地要津，是當地住民信仰重鎮，主管官署諸羅縣更加重視其資訊蒐集功能，積極改善其硬體設施。草創後第三年，即被重新改建成木構瓦頂的新建築。縣令周鍾瑄不僅從嘉義跋涉數百公里，前來臺北為重建的天妃廟題名「靈山」，還將關渡宮後山及臨臺北湖埔地數十甲，授予住持僧綿遠來招佃開墾收租，讓關渡宮得以永續經營下去。</p>
+    <div class="row">
+    <div class="col-sm-4">
+      <p style="font-size:32px;"><strong>主祀法會</strong></p>
+      <a href="#demo" data-toggle="collapse">
+        <img src="images/t2.jpg" class="img-thumbnail person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>記載關渡宮的詳細歷史及主要祀奉神明。</p>
+        <a href="http://www.kuantu.org.tw/GDT_C_01.html">詳看更多</a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p style="font-size:32px;"><strong>建築風華</strong></p>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="images/t3.jpg" class="img-thumbnail person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>一探究竟關渡宮的建築之美。</p>
+        <a href="http://www.kuantu.org.tw/GDT_C_02.html">詳看更多</a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p style="font-size:32px;"><strong>藝術典藏</strong></p>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="images/t4.jpg" class="img-thumbnail person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>關渡宮的建築處處隱藏藝術之美。</p>
+        <a href="http://www.kuantu.org.tw/GDT_C_03.html">詳看更多</a>
+      </div>
+    </div>
+  </div>
+</div>  
+</div>
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">關渡自然公園</h3>
+  <p class="text-center"><em>"為東亞澳遷移性水鳥與原生生物提供良好棲息環境，與全球重要濕地中心共同保護濕地生態。"<br>"提供優質自然生態景點，並透過專業研究、多元文化與教育活動引領民眾支持和參與濕地永續發展行動。"</em></p>
+    <div class="row">
+    <div class="col-sm-4">
+      <p style="font-size:32px;"><strong>成立緣起</strong></p>
+      <a href="#demo" data-toggle="collapse">
+        <img src="images/p2.jfif" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <p>「關渡自然公園」位處淡水河及基隆河的交會口，自古以來，即是重要的候鳥棲地。然而滄海桑田的變換、經濟巨輪的干擾，溼地生物的棲息環境遭到嚴重破壞，故自民國70年起，就有保育人士要求政府成立保護區，保護這裡豐富的物種。
+      </p>
+      <a href="https://gd-park.org.tw/about/23">詳看更多</a>
+    </div>
+    <div class="col-sm-4">
+      <p style="font-size:32px;"><strong>工作內容</strong></p>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="images/p3.jfif" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <p>維持台灣重要濕地生物多樣性之生態環境、<br>推動濕地明智利用之示範場域、<br>推廣濕地價值之環境教育中心、<br>引領民眾親近自然之服務場域、<br>倡導生態保育之自然藝術中心、<br>串接東亞夥伴交流之濕地中心</p>
+      <a href="https://gd-park.org.tw/conservation">保育工作</a><br>
+      <a href="https://gd-park.org.tw/education">教育工作</a>
+    </div>
+    <div class="col-sm-4">
+      <p style="font-size:32px;"><strong>歷年成果</strong></p>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="images/p4.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <p>台北市野鳥學會自2001/12起，在市政府的委託下，創全國之先例，以自負盈虧的方式經營全臺灣的第一個濕地保護區。<br>經營近17年，累積200萬人入園參觀、70萬人教育活動辦理、22萬人的學校戶外教學活動、12萬人的親子營隊活動、1萬人專業講習活動，及萬場大小型環境教育活動辦理。</p>
+      <a href="https://gd-park.org.tw/about/26">詳看更多</a>
+    </div>
+  </div>
+</div>
+<div id="School" class="bg-1">
+  <br>
+    <br>
+      <br>
+        <br>
+  <h3 class="text-center">在地學校</h3>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">小學</a></li>
+    <li><a data-toggle="tab" href="#menu1">國中</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>關渡國小</h2>
+      <p>地址：112台北市北投區中央北路四段581號<br>電話：0228912847</p>
+      <img src="images/s1.jpg" class="img-thumbnail" alt="Random Name" width="255" height="255">
+      <a href="http://www.ktjhs.tp.edu.tw/">詳看更多</a>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>關渡國中</h2>
+      <p>地址：112台北市北投區知行路212號<br>電話：0228582527</p>
+      <img src="images/s2.jpg" class="img-thumbnail" alt="Random Name" width="255" height="255">
+      <a href="http://www.ktjhs.tp.edu.tw/">詳看更多</a>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+
+<!-- Image of location/map -->
+<img src="Guandu_River_City.jpg" class="img-responsive" style="width:100%">
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>This Website Made By 40748403 曾美瑗</p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    if (this.hash !== "") {
+
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        window.location.hash = hash;
+      });
+    } 
+  });
+})
+</script>
+
+</body>
+</html>
